@@ -1,0 +1,141 @@
+/* about_tab css */
+.about_tab {
+    background-color: #00000098;
+    width: 100%;
+    height: 100%;
+    padding: 5% 8%;
+    display: none;
+}
+
+.about_tab__top {
+    height: 30%;
+    display: grid;
+    grid-template-columns: 3.5fr 6.5fr;
+    column-gap: 15px;
+    margin-bottom: 15px;
+}
+
+.about_tab__top__left {
+    border: 2px solid white;
+    padding: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.about_tab__top__left__title {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0;
+    color: white;
+    z-index: 2;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.about_tab__top__left__video {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.about_tab__top__left:hover>.about_tab__top__left__video {
+    display: block;
+}
+
+
+.about_tab__top__right {
+    border: 2px solid white;
+    padding: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.about_tab__top__right:hover>.about_tab__top__right__video {
+    display: block;
+}
+
+.about_tab__top__right__title {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0;
+    color: white;
+    z-index: 2;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.about_tab__top__right__video {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+
+
+.about_tab__bottom {
+    height: 50%;
+    display: grid;
+    grid-template-columns: 6.5fr 3.5fr;
+    color: white
+}
+
+.about_tab__bottom__left {
+    padding-right: 40px;
+}
+
+.about_tab__bottom__left__title {
+    margin-bottom: 5px;
+    font-size: 65px;
+}
+
+.about_tab__bottom__left__description {
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+
+
+.about_tab__bottom__right {
+    border: 2px solid white;
+    padding: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.about_tab__bottom__right:hover>.about_tab__bottom__right__video {
+    display: block;
+}
+
+.about_tab__bottom__right__title {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0;
+    color: white;
+    z-index: 2;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.about_tab__bottom__right__video {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}

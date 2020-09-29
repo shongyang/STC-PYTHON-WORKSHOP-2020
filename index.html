@@ -12,66 +12,112 @@
       content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
     <link rel="stylesheet" media="screen" href="css/style.css" />
+    <link rel="stylesheet" media="screen" href="css/join_tab.css" />
+    <link rel="stylesheet" media="screen" href="css/about_tab.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
-      href="https://fonts.googleapis.com/css?family=Montserrat"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
       rel="stylesheet"
     />
-    <style>
-      body {
-        font-family: "Montserrat";
-        font-size: 22px;
-      }
-    </style>
-
-    <style>
-      .sidenav {
-        height: 100vh;
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        background-color: rgb(255, 255, 255);
-
-      }
-
-      .sidenav a {
-        padding: 8px 8px 8px 32px;
-        text-decoration: none;
-        font-size: 25px;
-        color: #000000;
-        display: block;
-        transition: 0.3s;
-        margin-top: 10px;
-        margin-left: 30px;
-        margin-right: 20px;
-      }
-
-      .sidenav a:hover {
-        color: #f1f1f1;
-      }
-    </style>
   </head>
 
   <body>
-    <div id="mySidenav" class="sidenav">
-      <div>
-        <a target="_blank" style="margin-left: -20px" href="python-logo-2.png">
-          <img
-            src="python-logo-2.png"
-            alt="Pythonlogo"
-            width="200"
-            height="200"
-          />
+    <div class="content">
+      <div class="ham" onclick="toggleSideNav()">
+        <div class="hamline"></div>
+        <div class="hamline"></div>
+        <div class="hamline"></div>
+      </div>
+      <div id="mySidenav" class="sidenav">
+        <img
+          onclick="refreshExistingTab()"
+          src="python-logo-2.png"
+          class="image"
+          alt="Pythonlogo"
+        />
+        <button class="button" onclick="openTab('about')">ABOUT</button>
+        <button class="button">CHAT</button>
+        <button class="button" onclick="openTab('join')">JOIN</button>
+
+        <a
+          href="https://facebook.com/sunwaytechclub"
+          class="fb-link"
+          target="_blank"
+        >
+          <img src="stclogo.png" class="image" alt="Pythonlogo" />
         </a>
       </div>
-      <a href="#">ABOUT</a>
-      <a href="#">CHAT</a>
-      <a href="#">JOIN</a>
+
+      <div class="about_tab">
+        <div class="about_tab__top">
+          <div class="about_tab__top__left">
+            <video
+              src="http://www.w3schools.com/html/movie.mp4"
+              autoplay
+              muted
+              loop
+              class="about_tab__top__left__video"
+            ></video>
+            <h1 class="about_tab__top__left__title">BEGINNER</h1>
+          </div>
+          <div class="about_tab__top__right">
+            <video
+              src="http://www.w3schools.com/html/movie.mp4"
+              autoplay
+              muted
+              loop
+              class="about_tab__top__right__video"
+            ></video>
+            <h1 class="about_tab__top__right__title">INTERMEDIATE</h1>
+          </div>
+        </div>
+        <div class="about_tab__bottom">
+          <div class="about_tab__bottom__left">
+            <h1 class="about_tab__bottom__left__title">ABOUT</h1>
+            <p class="about_tab__bottom__left__description">
+              STC Python Workshop is a special one-day workshop created for
+              learners of all levels to get familiar with the second most
+              popular programming language in the world.
+            </p>
+          </div>
+          <div class="about_tab__bottom__right">
+            <video
+              src="http://www.w3schools.com/html/movie.mp4"
+              autoplay
+              muted
+              loop
+              class="about_tab__bottom__right__video"
+            ></video>
+            <h1 class="about_tab__bottom__right__title">PRACTICAL</h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="join_tab">
+        <h1 class="join_tab__title">JOIN</h1>
+        <iframe
+          class="join_tab__video"
+          src="https://www.youtube.com/embed/sOtqDjqEBeo?controls=0"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+        <div class="join_tab__bottom">
+          <div class="join_tab__bottom__inner">
+            <p class="join_tab__description">
+              Kindly visit our Eventbrite site to register for your seat at our
+              Python Workshop.
+            </p>
+
+            <a href="" class="join_tab__button">REGISTER</a>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div id="particles-js"></div>
     <script src="particles.min.js"></script>
-    <script src="js\app.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>
