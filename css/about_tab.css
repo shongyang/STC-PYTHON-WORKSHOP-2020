@@ -30,7 +30,7 @@
     z-index: 2;
     position: absolute;
     top: 10px;
-    left: 10px;
+    left: 15px;
 }
 
 .about_tab__top__left__video {
@@ -68,7 +68,7 @@
     z-index: 2;
     position: absolute;
     top: 10px;
-    left: 10px;
+    left: 15px;
 }
 
 .about_tab__top__right__video {
@@ -126,7 +126,7 @@
     z-index: 2;
     position: absolute;
     top: 10px;
-    left: 10px;
+    left: 15px;
 }
 
 .about_tab__bottom__right__video {
