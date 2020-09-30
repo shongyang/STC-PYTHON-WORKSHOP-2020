@@ -16,14 +16,23 @@ function toggleSideNav(x) {
 }
 
 function openTab(tab) {
+    let main_tab = document.querySelector('.main_tab');
     let about_tab = document.querySelector('.about_tab');
     let join_tab = document.querySelector('.join_tab');
     switch (tab) {
+        case 'main':
+            main_tab.style.display = 'block';
+            about_tab.style.display = 'none';
+            join_tab.style.display = 'none';
+            return;
+
         case 'about':
+            main_tab.style.display = 'none';
             about_tab.style.display = 'block';
             join_tab.style.display = 'none';
             return;
         case 'join':
+            main_tab.style.display = 'none';
             about_tab.style.display = 'none';
             join_tab.style.display = 'block';
             return

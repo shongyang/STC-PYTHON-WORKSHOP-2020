@@ -14,6 +14,7 @@
     <link rel="stylesheet" media="screen" href="css/style.css" />
     <link rel="stylesheet" media="screen" href="css/join_tab.css" />
     <link rel="stylesheet" media="screen" href="css/about_tab.css" />
+    <link rel="stylesheet" media="screen" href="css/main_tab.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
@@ -31,7 +32,7 @@
     <div class="content">
       <div id="mySidenav" class="sidenav">
         <img
-          onclick="refreshExistingTab()"
+          onclick="openTab('main')"
           src="python-logo-2b.png"
           class="image"
           alt="Pythonlogo"
@@ -59,6 +60,24 @@
             style="height: 30%"
           />
         </a>
+        <!-- <p id="demo" class="p2"></p>
+        <img
+          src="https://i.ibb.co/SXGWPsM/clock1.png"
+          alt="clock1"
+          border="0"
+          z-index="-1"
+        /> -->
+      </div>
+
+      <div class="main_tab">
+        <image
+          src="https://i.ibb.co/SXGWPsM/clock1.png"
+          alt="clock1"
+          border="0"
+          z-index="-2"
+        >
+      <p id="demo" class="p2"></p>
+        
       </div>
 
       <div class="about_tab">
@@ -137,5 +156,35 @@
         event.preventDefault()
       );
     </script>
+    <script>
+      // Set the date we're counting down to
+      var countDownDate = new Date("Oct 24, 2020 00:00:00").getTime();
+      
+      // Update the count down every 1 second
+      var x = setInterval(function() {
+      
+        // Get today's date and time
+        var now = new Date().getTime();
+          
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+          
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+          
+        // Output the result in an element with id="demo"
+        document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+          
+        // If the count down is over, write some text 
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("demo").innerHTML = "EXPIRED";
+        }
+      }, 1000);
+      </script>
   </body>
 </html>
